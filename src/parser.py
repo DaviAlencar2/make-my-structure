@@ -15,9 +15,10 @@ def parse_structure(file_path) -> dict:
         indent_level = len(line) - len(line.lstrip("│ "))
 
         while indent_level < previous_indent:
-            if len(stack) > 1:  
+            if len(stack) > 2:  
                 stack.pop()
             previous_indent -= 4 
+            # print(indent_level, previous_indent)
 
         if line.endswith("/"):
             folder_name = line.replace('├── ', '').replace('└──','').replace('│   ', '').replace('/', '').strip()
@@ -28,11 +29,9 @@ def parse_structure(file_path) -> dict:
         else:
             file_name = line.replace('├──', '').replace('└──','').replace('│    ','').strip()
             stack[-1][file_name] = None
-
-            # Ajustar a pilha se o nível de indentação diminuiu
             
-                
         previous_indent = indent_level
+
 
     return structure
 

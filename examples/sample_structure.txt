@@ -5,4 +5,6 @@ projeto/
 │    │    └── test.py
 │    └── utils.py
 ├── README.md
+├── docs/
+│    └── hello.txt
 └── .gitignore
