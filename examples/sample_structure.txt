@@ -1,0 +1,8 @@
+projeto/
+├── src/
+│   ├── main.py
+│   ├── tests/
+│   │   └── test.py
+│   └── utils.py
+├── README.md
+└── .gitignore
