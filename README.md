@@ -6,7 +6,7 @@
 - **Criar pastas e arquivos automaticamente.**
 - **Interpretar uma descrição textual da estrutura.**
 - **Salvar as pastas e arquivos em um diretório especificado pelo usuário.**
-- **Futuramente, verificar se o usuário usou ou não o Chatgpt, para tratar os caracteres diferentes.**
+- **Futuramente, verificar se o usuário usou ou não o Chatgpt, para tratar os caracteres diferentes e tamanho de identação.**
 
 ##  Como Usar
 1. **Clonar o repositório:**
