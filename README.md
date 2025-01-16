@@ -9,7 +9,7 @@
 ##  Como Usar
 1. **Clonar o repositório:**
    ```bash
-   git clone <https://www.github.com/DaviAlencar2/make-my-structure>
+   git clone https://www.github.com/DaviAlencar2/make-my-structure
    ```
 2. **Instalar as dependências:(Por enquanto, NÃO NECESSÁRIO!!!)**
    ```bash
@@ -20,17 +20,17 @@
    python src/main.py
    ```
 4. **Exemplo de entrada no arquivo `sample_structure.txt`:**
-```plaintext
-projeto/
-├── src/
-│    ├── main.py
-│    ├── tests/
-│    │    └── test.py
-│    └── utils.py
-├── README.md
-├── docs/
-│    └── hello.txt
-└── .gitignore
-```
+   ```plaintext
+   projeto/
+   ├── src/
+   │    ├── main.py
+   │    ├── tests/
+   │    │    └── test.py
+   │    └── utils.py
+   ├── README.md
+   ├── docs/
+   │    └── hello.txt
+   └── .gitignore
+   ```
 
 O script criará essa estrutura de arquivos e pastas automaticamente no diretório escolhido.
