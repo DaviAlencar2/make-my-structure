@@ -1,10 +1,23 @@
-projeto/
+projeto3/
 ├── src/
-│    ├── main.py
-│    ├── tests/
-│    │    └── test.py
-│    └── utils.py
+│   ├── main.py
+│   ├── tests/
+│   │   ├── unit/
+│   │   │   └── test_unit.py
+│   │   ├── integration/
+│   │   │   └── test_integration.py
+│   │   └── test_helpers.py
+│   ├── utils/
+│   │   ├── file_utils.py
+│   │   └── string_utils.py
+│   └── config.py
 ├── README.md
 ├── docs/
-│    └── hello.txt
-└── .gitignore
+│   ├── api/
+│   │   └── api_docs.md
+│   ├── user_guide/
+│   │   └── guide.md
+│   └── hello.txt
+├── .gitignore
+├── requirements.txt
+└── setup.py

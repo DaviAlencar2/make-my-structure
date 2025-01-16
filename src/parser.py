@@ -21,13 +21,13 @@ def parse_structure(file_path) -> dict:
             # print(indent_level, previous_indent)
 
         if line.endswith("/"):
-            folder_name = line.replace('├── ', '').replace('└──','').replace('│   ', '').replace('/', '').strip()
+            folder_name = line.replace('├──', '').replace('└──','').replace('│   ', '').replace('/', '').strip()
             current_folder = {}
             stack[-1][folder_name] = current_folder
             stack.append(current_folder)
 
         else:
-            file_name = line.replace('├──', '').replace('└──','').replace('│    ','').strip()
+            file_name = line.replace('├──', '').replace('└──','').replace('│   ','').strip()
             stack[-1][file_name] = None
             
         previous_indent = indent_level
