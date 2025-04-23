@@ -19,9 +19,9 @@ parse_and_create_structure() {
     while IFS= read -r linha || [ -n "$linha" ]; do
         [ -z "$(echo "$linha" | tr -d '[:space:]')" ] && continue
         
-        identacao=$(echo "$linha" | grep -o -E "^[│ ]+" | wc -c)
-        
-        item=$(echo "$linha" | sed 's/[├└]//g' | sed 's/──//g' | sed 's/│//g' | sed 's/^ *//g' | sed 's/ *$//g')
+        identacao=$(echo "$linha" | grep -o -E "^[| ]+" | wc -c)
+    
+        item=$(echo "$linha" | sed 's/[|\\+]--//g' | sed 's/|//g' | sed 's/^ *//g' | sed 's/ *$//g')
         
         if [ "$identacao" -lt "$indentacao_anterior" ]; then
             diferenca=$((($indentacao_anterior - $identacao) / 4))
@@ -46,29 +46,3 @@ parse_and_create_structure() {
     
     echo "Estrutura criada com sucesso em: $pasta_destino"
 }
-
-selecionar_pasta() {
-    echo "Digite o caminho para o diretório de destino (ou deixe em branco para usar o diretório atual):"
-    read -r pasta
-    
-    if [ -z "$pasta" ]; then
-        pasta="."
-    fi
-    
-    echo "$pasta"
-}
-
-main() {
-    local estrutura_arquivo="${1:-./examples/sample_structure.txt}"
-    
-    local pasta_destino
-    if [ -n "$2" ]; then
-        pasta_destino="$2"
-    else
-        pasta_destino=$(selecionar_pasta)
-    fi
-    
-    parse_and_create_structure "$estrutura_arquivo" "$pasta_destino"
-}
-
-main "$@"

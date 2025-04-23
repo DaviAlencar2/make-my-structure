@@ -1,0 +1,8 @@
+projeto/
+|-- src/
+|   |-- main.py
+|   \-- utils/
+|       \-- helpers.py
+|-- tests/
+|   \-- test_main.py
+\-- README.md
