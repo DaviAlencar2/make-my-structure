@@ -45,7 +45,9 @@ parse_and_create_structure() {
     done < "$estrutura_arquivo"
     
     echo "Estrutura criada com sucesso em: $pasta_destino"
-    selecionar_pasta() {
+}
+
+selecionar_pasta() {
     echo "Digite o caminho para o diretório de destino (ou deixe em branco para usar o diretório atual):"
     read -r pasta
     
@@ -70,4 +72,3 @@ main() {
 }
 
 main "$@"
-}
